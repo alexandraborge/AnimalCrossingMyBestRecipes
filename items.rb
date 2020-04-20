@@ -21,9 +21,17 @@ class Items
   end
 
   def self.most_expensive_overall(number_of_records = 10)
-    sorted_items = all.sort_by { |item| item['Price'] }.reverse[0..(number_of_records - 1)]
-    FormattingHelpers.formatted_results(sorted_items)
+    FormattingHelpers.formatted_results(sorted_items(all, number_of_records))
   end
+
+  def self.most_expensive_by_category(category, number_of_records = 10)
+    FormattingHelpers.formatted_results(sorted_items(build[category], number_of_records))
+  end
+
+  def self.sorted_items(items, number_of_records)
+    items.sort_by { |item| item['Price'] }.reverse[0..(number_of_records - 1)]
+  end
+
 
   def initialize(path)
     @category = path.gsub('.csv', '')
@@ -44,4 +52,4 @@ class Items
   end
 end
 
-puts Items.most_expensive_overall(100)
+puts Items.most_expensive_by_category('other')
