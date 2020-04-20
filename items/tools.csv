@@ -1,0 +1,40 @@
+Name,Required Materials,Durability,Price
+Flimsy Net,5× Tree Branch,10 Bugs,100 Bells
+Net,"1× Flimsy Net, 1× Iron Nugget",30 Bugs,600 Bells
+Gold Net,"1× Net, 1× Gold Nugget",90 Bugs,"10,400 Bells"
+Flimsy Fishing Rod,5× Tree Branch,10 Fish,100 Bells
+Fishing Rod,"1× Flimsy Fishing Rod, 1× Iron Nugget",30 Fish,600 Bells
+Gold Fishing Rod,"1× Fishing Rod, 1× Gold Nugget",90 Fish,"10,400 Bells"
+Flimsy Axe,"5× Tree Branch, 1× Stone",40 Hits,200 Bells
+Stone Axe,"1× Flimsy Axe, 3× Wood",100 Hits,560 Bells
+Axe,"1× Flimsy Axe, 3× Wood, 1× Iron Nugget",100 Hits,625 Bells
+Gold Axe,"1× Axe, 1× Gold Nugget",200 Hits,"10,655 Bells"
+Flimsy Shovel,5× Hardwood,40 Hits,200 Bells
+Shovel,"1× Flimsy Shovel, 1× Iron Nugget",100 Hits,600 Bells
+Golden Shovel,"1× Shovel, 1× Gold Nugget",200 Hits,"10,675 Bells"
+Flimsy Watering Can,5× Softwood,20 Dry Flowers,200 Bells
+Watering Can,"1× Flimsy Watering Can, 1× Iron Nugget",60 Dry Flowers,600 Bells
+Gold Watering Can,"1× Watering Can, 1× Gold Nugget",180 Dry Flowers,"10,675 Bells"
+Slingshot,5× Hardwood,20 Balloons,225 Bells
+Golden Slingshot,"1× Slingshot, 1× Gold Nugget",60 Balloons,"10,300 Bells"
+Vaulting Pole,5× Softwood,Unbreakable,600 Bells
+Ladder,"4× Wood, 4× Hardwood, 4× Softwood",Unbreakable,"1,440 Bells"
+Wand,2× Star Fragment,Unbreakable,"1,000 Bells"
+Star Wand,"3× Star Fragment, 1× Large Star Fragment",Unbreakable,"6,500 Bells"
+Iron Wand,"3x Iron Nugget, 3x Star Fragment",Unbreakable,"3,750 Bells"
+Golden Wand,"2x Golden Nugget, 3x Star Fragment",Unbreakable,"20,750 Bells"
+Cosmos Wand,"1× White Cosmos, 3× Star Fragment",Unbreakable,"1,580 Bells"
+Hyacinth Wand,"1x Pink Hyacinths, 3x Star Fragment",Unbreakable,"1,660 Bells"
+Lily Wand,"1× White Lily, 3× Star Fragment",Unbreakable,"1,580 Bells"
+Mums Wand,"1x Yellow Mums, 3x Star Fragment",Unbreakable,"1,580 Bells"
+Pansy Wand,"1x Yellow Pansies, 3x Star Fragment",Unbreakable,"1,580 Bells"
+Rose Wand,"1× Red Rose, 3× Star Fragment",Unbreakable,"1,580 Bells"
+Tulip Wand,"1x Red Tulips, 3x Star Fragment",Unbreakable,"1,580 Bells"
+Windflower Wand,"1x Windflowers, 3x Star Fragment",Unbreakable,"1,580 Bells"
+Mushroom Wand,"3x Skinny Mushroom, 3x Star Fragment",Unbreakable,"3,300 Bells"
+Shell Wand,"3x Summer Shell, 3x Star Fragment",Unbreakable,"5,100 Bells"
+Tree-Branch Wand,"5x Tree Branch, 3x Star Fragment",Unbreakable,"1,550 Bells"
+Bamboo Wand,"6× Young Spring Bamboo, 3× Star Fragment",Unbreakable,"3,900 Bells"
+Cherry-Blossom Wand,"3× Cherry-Blossom Petal, 3× Star Fragment",Unbreakable,"2,700 Bells"
+Ice Wand,"1× Large Snowflake, 3× Star Fragment",Unbreakable,"6,500 Bells"
+Bunny Day Wand,"1× Wobbling Zipper Toy, 3× Star Fragment",Unbreakable,"11,100 Bells"
