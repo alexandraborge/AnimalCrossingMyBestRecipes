@@ -4,8 +4,8 @@ module FormattingHelpers
     results = ''
     items.each_with_index do |item, index|
       index += 1
-      price = item['Price'].to_s.split('').insert(-4, ',').join
-      results += "#{index}: #{item['Name']} | #{price} bells\n\t #{item['Required Materials'].gsub(',', "\n\t")}\n-------------------------------------\n"
+      price = item['Price'].to_s.split('').length > 3 ? item['Price'].to_s.split('').insert(-4, ',').join : item['Price']
+      results += "#{index}: #{item['Name']} | #{price} bells\n\t #{item['Required Materials']&.gsub(',', "\n\t")}\n-------------------------------------\n"
     end
     results
   end
