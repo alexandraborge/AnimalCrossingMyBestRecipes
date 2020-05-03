@@ -1,7 +1,8 @@
 require 'yaml'
 require 'singleton'
+require_relative 'items'
 
-class MyRecipes
+class MyRecipes < Items
   include Singleton
 
   def all
@@ -9,4 +10,4 @@ class MyRecipes
   end
 end
 
-puts MyRecipes.instance.all
+puts Items.all

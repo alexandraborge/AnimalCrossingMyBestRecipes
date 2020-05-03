@@ -52,4 +52,4 @@ class Items
   end
 end
 
-puts Items.most_expensive_by_category('fish', 100)
+puts Items.most_expensive_overall(300)
