@@ -4,27 +4,34 @@ require_relative 'my_recipes'
 require_relative 'items'
 require 'byebug'
 
+class Responses
+
+  def initialize(request)
+    @request = request
+  end
+
+  def build_response
+    request = @request.downcase
+    number = request.split.detect  {|x| x[/\d+/]}.to_i || 10
+    category = request.split.detect { |x| Items.categories.include?(x) } || ''
+    case request
+    when "top #{number} overall"
+      Items.most_expensive_overall(number)
+    when "top #{number} #{category}"
+      Items.most_expensive_by_category(category, number)
+    else
+      "Don't know that request"
+    end
+  end
+end
+
+
 post '/' do
-  byebug
   twiml = Twilio::TwiML::MessagingResponse.new do |r|
     r.message(
-      body: 'Ahoy! Thanks so much for your message.'
+      body: Responses.new(params["Body"]).build_response
       )
   end
 
   twiml.to_s  
 end
-
-account_sid = ENV['TWILIO_ACCOUNT_SID']
-auth_token = ENV['TWILIO_AUTH_TOKEN']
-
-twillio_num = ENV['TWILIO_NUM']
-my_num = ENV['MY_NUM']
-
-# @client = Twilio::REST::Client.new account_sid, auth_token
-# message = @client.messages.create(
-#     body: "Hello from Ruby",
-#     to: twillio_num,
-#     from: my_num
-#     )
-

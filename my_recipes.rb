@@ -10,4 +10,4 @@ class MyRecipes < Items
   end
 end
 
-puts Items.all
+puts MyRecipes.all

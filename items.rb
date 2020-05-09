@@ -20,6 +20,10 @@ class Items
     build.flat_map { |category, items| items }.uniq { |item| item['Name'] } 
   end
 
+  def self.categories
+    Items.build.keys
+  end
+
   def self.most_expensive_overall(number_of_records = 10)
     FormattingHelpers.formatted_results(sorted_items(all, number_of_records))
   end
@@ -52,4 +56,4 @@ class Items
   end
 end
 
-# puts Items.most_expensive_overall(300)
+puts Items.categories
