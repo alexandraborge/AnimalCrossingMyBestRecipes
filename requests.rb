@@ -2,7 +2,7 @@ require 'twilio-ruby'
 require 'sinatra'
 require_relative 'lib/my_recipes'
 require_relative 'lib/items'
-require 'byebug'
+require 'sinatra/base'
 
 class Responses
 

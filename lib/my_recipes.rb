@@ -1,6 +1,5 @@
 require 'yaml'
 require_relative 'items'
-require 'byebug'
 require_relative 'format_helpers'
 
 class MyRecipes < Items
