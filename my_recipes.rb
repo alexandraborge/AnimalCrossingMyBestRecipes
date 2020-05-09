@@ -1,13 +1,17 @@
 require 'yaml'
-require 'singleton'
 require_relative 'items'
+require 'byebug'
+require_relative 'format_helpers'
 
 class MyRecipes < Items
-  include Singleton
+  include FormattingHelpers
 
-  def all
+  def self.build
     YAML.load(File.read('my_recipes.yml'))
   end
-end
 
-puts MyRecipes.all
+  def self.all
+    build.flat_map { |category, items| items }.uniq
+      &.map { |item| Items.find_item(item.downcase) }
+  end
+end
