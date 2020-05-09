@@ -2,8 +2,10 @@ require 'twilio-ruby'
 require 'sinatra'
 require_relative 'my_recipes'
 require_relative 'items'
+require 'byebug'
 
 post '/' do
+  byebug
   twiml = Twilio::TwiML::MessagingResponse.new do |r|
     r.message(
       body: 'Ahoy! Thanks so much for your message.'
@@ -12,10 +14,6 @@ post '/' do
 
   twiml.to_s  
 end
-
-echo "export TWILIO_ACCOUNT_SID='AC26423a3001a3a0721a6bdba54a508f81'" > twilio.env
-echo "export TWILIO_AUTH_TOKEN='d16b67d62208431bc0905fbfc605c6fc'" >> twilio.env
-source ./twilio.env
 
 account_sid = ENV['TWILIO_ACCOUNT_SID']
 auth_token = ENV['TWILIO_AUTH_TOKEN']

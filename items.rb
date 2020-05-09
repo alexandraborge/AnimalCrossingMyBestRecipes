@@ -52,4 +52,4 @@ class Items
   end
 end
 
-puts Items.most_expensive_overall(300)
+# puts Items.most_expensive_overall(300)
