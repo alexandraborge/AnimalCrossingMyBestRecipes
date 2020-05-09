@@ -24,6 +24,14 @@ class Items
     Items.build.keys
   end
 
+  def self.find_item(item_name)
+    all.detect { |el| el["Name"].downcase == item_name }
+  end
+
+  def self.find_item_price(item)
+    item["Price"]
+  end
+
   def self.most_expensive_overall(number_of_records = 10)
     FormattingHelpers.formatted_results(sorted_items(all, number_of_records))
   end

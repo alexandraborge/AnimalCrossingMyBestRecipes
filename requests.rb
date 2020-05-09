@@ -12,6 +12,7 @@ class Responses
 
   def build_response
     request = @request.downcase
+    item = Items.find_item(request)
     number = request.split.detect  {|x| x[/\d+/]}.to_i || 10
     category = request.split.detect { |x| Items.categories.include?(x) } || ''
     case request
@@ -19,6 +20,8 @@ class Responses
       Items.most_expensive_overall(number)
     when "top #{number} #{category}"
       Items.most_expensive_by_category(category, number)
+    when "#{item["Name"].downcase}"
+      Items.find_item_price(item)
     else
       "Don't know that request"
     end
