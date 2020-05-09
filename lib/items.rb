@@ -63,5 +63,3 @@ class Items
     items
   end
 end
-
-puts Items.all

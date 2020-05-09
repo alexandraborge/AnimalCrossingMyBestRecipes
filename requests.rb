@@ -33,12 +33,17 @@ class Responses
   end
 end
 
-post '/' do
-  twiml = Twilio::TwiML::MessagingResponse.new do |r|
-    r.message(
-      body: Responses.new(params["Body"]).build_response
-      )
-  end
 
-  twiml.to_s  
+class Server < Sinatra::Base
+
+  post '/' do
+    twiml = Twilio::TwiML::MessagingResponse.new do |r|
+      r.message(
+        body: Responses.new(params["Body"]).build_response
+        )
+    end
+  
+    twiml.to_s  
+  end
 end
+

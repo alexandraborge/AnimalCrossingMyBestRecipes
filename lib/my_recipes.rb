@@ -15,5 +15,3 @@ class MyRecipes < Items
       &.map { |item| Items.find_item(item.downcase) }
   end
 end
-
-puts MyRecipes.all
