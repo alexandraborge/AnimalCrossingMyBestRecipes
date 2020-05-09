@@ -25,7 +25,7 @@ class Responses
       MyRecipes.most_expensive_overall(number)
     when "my top #{number} #{category}"
       MyRecipes.most_expensive_by_category(category, number)
-    when "#{item["Name"].downcase}"
+    when "#{item&.[]("Name")&.downcase}"
       Items.find_item_price(item)
     else
       "Don't know that request"
