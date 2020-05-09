@@ -7,7 +7,7 @@ class MyRecipes < Items
   include FormattingHelpers
 
   def self.build
-    YAML.load(File.read('my_recipes.yml'))
+    YAML.load(File.read('lib/my_recipes.yml'))
   end
 
   def self.all
@@ -15,3 +15,5 @@ class MyRecipes < Items
       &.map { |item| Items.find_item(item.downcase) }
   end
 end
+
+puts MyRecipes.all
